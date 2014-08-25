@@ -13,7 +13,7 @@ npm install d-peer-to-peer
 Require the module:
 
 ```
-peer = requre 'd-peer-to-peer'
+peer = require 'd-peer-to-peer'
 ```
 
 Start server, get middleware

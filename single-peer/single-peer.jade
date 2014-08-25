@@ -2,7 +2,9 @@ index:
   .single-peer
     if videoState == 'off'
       .padding
-        button.icon-play.btn.-block(on-click="start()", class="{{if isPartnerOnline}} -success{{/}}") Start Video &sp;
+        button.icon-play.btn.-block(on-click="start()",
+            class="{{if isPartnerOnline}} -success{{/}}")
+          | Start Video &sp;
           if isPartnerOnline
             | (online)
           else
