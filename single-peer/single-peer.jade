@@ -2,13 +2,16 @@ index:
   .single-peer
     if videoState == 'off'
       .container
-        .icon-play.button(on-click="start()",
-            class="{{if isPartnerOnline}} -success{{/}}")
-          | Start Video &sp;
+        .enable-message
+          | You have both enabled video chat, &sp;
           if isPartnerOnline
-            | (online)
+            | and you are both online!
           else
-            | (offline)
+            | but your partner is offline.
+        if isPartnerOnline
+          .icon-play.button(on-click="start()")
+            | Start Video &sp;
+
 
     ._video-container(class="{{if videoState == 'off'}}-off{{/}}")
       video._remoteVideo(as="remoteVideo", autoplay)
